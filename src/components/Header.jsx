@@ -9,20 +9,20 @@ const Header = () => {
 		<nav>
 			<div className="container nav__container">
 				<Link to="/" className="nav__logo">
-					<img src={Logo} alt="logo" width={60} />
+					<img src={Logo} alt="logo" />
 				</Link>
 				<ul>
 					<li>
-						<Link to="/profile"></Link>
+						<Link to="/profile">Makan</Link>
 					</li>
 					<li>
-						<Link to="/create"></Link>
+						<Link to="/create">Minum</Link>
 					</li>
 					<li>
-						<Link to="/authors"></Link>
+						<Link to="/authors">About</Link>
 					</li>
 					<li>
-						<Link to="/logout"></Link>
+						<Link to="/logout">Career</Link>
 					</li>
 				</ul>
 				<button className="nav__toggle-btn">
