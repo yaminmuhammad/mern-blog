@@ -11,7 +11,7 @@ const Header = () => {
 				<Link to="/" className="nav__logo">
 					<img src={Logo} alt="logo" />
 				</Link>
-				<ul>
+				<ul className="nav__menu">
 					<li>
 						<Link to="/profile">Makan</Link>
 					</li>
