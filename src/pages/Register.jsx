@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+
 
 const Register = () => {
 	const [userData, setUserData] = useState({
@@ -8,6 +10,7 @@ const Register = () => {
 		password: "",
 		password2: "",
 	});
+	const [error]
 
 	const changeInputHandler = (e) => {
 		setUserData((prevState) => {
