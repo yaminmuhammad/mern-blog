@@ -25,22 +25,22 @@ const Header = () => {
 					<ul className="nav__menu">
 						<li>
 							<Link to="/profile/sdfsdf" onClick={closeNavbarHandler}>
-								Makan
+								Profile
 							</Link>
 						</li>
 						<li>
 							<Link to="/create" onClick={closeNavbarHandler}>
-								Minum
+								Create Post
 							</Link>
 						</li>
 						<li>
 							<Link to="/authors" onClick={closeNavbarHandler}>
-								About
+								Authors
 							</Link>
 						</li>
 						<li>
 							<Link to="/logout" onClick={closeNavbarHandler}>
-								Career
+								Logout
 							</Link>
 						</li>
 					</ul>
