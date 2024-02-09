@@ -9,7 +9,8 @@ const DUMMY_POSTS = [
 		thumbnail: Thumbnail1,
 		category: "Agriculture",
 		title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-		desc: "lorem ipsum dolorLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit",
+		description:
+			"lorem ipsum dolorLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit",
 		authorID: 3,
 	},
 	{
@@ -17,7 +18,7 @@ const DUMMY_POSTS = [
 		thumbnail: Thumbnail2,
 		category: "Agriculture",
 		title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-		desc: "lorem ipsum dolor",
+		description: "lorem ipsum dolor",
 		authorID: 4,
 	},
 	{
@@ -25,7 +26,7 @@ const DUMMY_POSTS = [
 		thumbnail: Thumbnail3,
 		category: "Agriculture",
 		title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-		desc: "lorem ipsum dolor",
+		description: "lorem ipsum dolor",
 		authorID: 2,
 	},
 	{
@@ -33,7 +34,7 @@ const DUMMY_POSTS = [
 		thumbnail: Thumbnail4,
 		category: "Agriculture",
 		title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-		desc: "lorem ipsum dolor",
+		description: "lorem ipsum dolor",
 		authorID: 1,
 	},
 ];
