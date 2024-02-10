@@ -10,7 +10,7 @@ import axios from "axios";
 const PostDetail = () => {
 	const { id } = useParams();
 	const [post, setPost] = useState(null);
-	const [creatorID, setCreatorID] = useState(null);
+	// const [creatorID, setCreatorID] = useState(null);
 	const [error, setError] = useState(null);
 	const [isLoading, setIsLoading] = useState(false);
 
@@ -22,10 +22,14 @@ const PostDetail = () => {
 			try {
 				const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/posts/${id}`);
 				setPost(response?.data);
+				// setCreatorID(response?.data?.creator);
 			} catch (error) {
 				setError(error);
 			}
+			setIsLoading(false);
 		};
+
+		getPost();
 	}, []);
 
 	if (isLoading) {
@@ -38,20 +42,22 @@ const PostDetail = () => {
 			{post && (
 				<div className="container post-detail__container">
 					<div className="post-detail__header">
-						{/* <PostAuthor /> */}
-						{currentUser?.id == post?.creator && (
+						<PostAuthor authorID={post.creator} createdAt={post.createdAt} />
+						{currentUser?.id === post?.creator && (
 							<div className="post-detail__buttons">
-								<Link to={"/posts/werwer/edit"} className="btn sm primary">
+								<Link to={`/posts/${post?._id}/edit`} className="btn sm primary">
 									Edit
 								</Link>
-								<DeletePost />
+								<DeletePost postId={id} />
 							</div>
 						)}
 					</div>
 					<h1>This is the post title!</h1>
 					<div className="post-detail__thumbnail">
-						<img src={Thumbnail} alt="thumbnail" />
+						<img src={`${process.env.REACT_APP_ASSETS_URL}/uploads/${post.thumbnail}`} alt="thumbnail" />
 					</div>
+					<p dangerouslySetInnerHTML={{ __html: post.description }}></p>
+
 					{/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam</p> */}
 				</div>
 			)}
