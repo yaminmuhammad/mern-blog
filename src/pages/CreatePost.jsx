@@ -10,7 +10,7 @@ const CreatePost = () => {
 	const [category, setCategory] = useState("");
 	const [description, setDescription] = useState("");
 	const [thumbnail, setThumbnail] = useState("");
-	const { error, setError } = useState("");
+	const [error, setError] = useState("");
 	const navigate = useNavigate();
 
 	const { currentUser } = useContext(UserContext);
@@ -48,13 +48,14 @@ const CreatePost = () => {
 
 	const POST_CATEGORIES = [
 		"Agriculture",
-		"Bussiness",
+		"Business",
 		"Education",
 		"Entertainment",
 		"Art",
-		"Investment",
-		"Uncategorized",
+		"Politics",
 		"Weather",
+		"Technology",
+		"Other",
 	];
 
 	const insertPost = async (e) => {
@@ -77,7 +78,11 @@ const CreatePost = () => {
 				return navigate("/");
 			}
 		} catch (error) {
-			setError(error.response.data.message);
+			if (error.response && error.response.status === 422) {
+				setError(error.response.data.message);
+			} else {
+				setError("An error occurred while creating the post.");
+			}
 		}
 	};
 
