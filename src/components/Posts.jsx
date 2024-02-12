@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PostItem from "./PostItem";
-import DUMMY_POSTS from "../data";
+
 import Loader from "./Loader";
 import axios from "axios";
 
